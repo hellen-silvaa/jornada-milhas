@@ -26,8 +26,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ModalComponent } from './shared/modal/modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
-import { HttpClientModule } from '@angular/common/http';import { NgModule } from '@angular/core';
-import { SharedModule } from './shared/shared.module'; // Importe o módulo que declara o componente
+import { HttpClientModule } from '@angular/common/http';
+import { PromocoesComponent } from './pages/home/promocoes/promocoes.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,8 @@ import { SharedModule } from './shared/shared.module'; // Importe o módulo que 
     CardDepoimentoComponent,
     FormBuscaComponent,
     ModalComponent,
-    BotaoControleComponent
+    BotaoControleComponent,
+    PromocoesComponent
   ],
   imports: [
     BrowserModule,
@@ -59,10 +60,9 @@ import { SharedModule } from './shared/shared.module'; // Importe o módulo que 
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
