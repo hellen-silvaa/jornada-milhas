@@ -12,10 +12,10 @@ export class PromocaoService {
   private apiUrl: string = environment.apiUrl;
 
   constructor(
-          private httpClient: HttpClient
-      ) { }
-      
-      listar() : Observable<Promocao[]>{
-          return this.httpClient.get<Promocao[]>(`${this.apiUrl}/promocoes`)
-      }
+    private httpClient: HttpClient
+  ) { }
+
+  listar () : Observable<Promocao[]> {
+    return this.httpClient.get<Promocao[]>(`${this.apiUrl}/promocoes`)
+  }
 }

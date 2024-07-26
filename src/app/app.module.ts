@@ -26,7 +26,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { ModalComponent } from './shared/modal/modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BotaoControleComponent } from './shared/botao-controle/botao-controle.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';import { NgModule } from '@angular/core';
+import { SharedModule } from './shared/shared.module'; // Importe o módulo que declara o componente
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,6 +62,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
