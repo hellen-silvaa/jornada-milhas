@@ -1,8 +1,13 @@
 <mat-form-field class="input-container" appearance="outline">
     <mat-label>{{ label }}</mat-label>
     <mat-icon matPrefix>
-        {{ matPrefix }}
+      {{ iconePrefixo }}
     </mat-icon>
-    <input matInput [placeholder]="placeholder">
+    <input matInput [matAutocomplete]="auto">
     <mat-icon matSuffix>search</mat-icon>
-</mat-form-field>
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
