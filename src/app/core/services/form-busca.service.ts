@@ -20,9 +20,20 @@ export class FormBuscaService {
       tipo: new FormControl("Executiva"),
       adultos: new FormControl(1),
       criancas: new FormControl(0),
-      bebes: new FormControl(0),
+      bebes: new FormControl(0)
     })
   }
+
+  getDescricaoPassageiros(): string {
+    let descricao = ''
+    
+    const adultos = this.formBusca.get('adultos')?.value
+    if (adultos && adultos > 0) {
+        descricao += ''
+    }
+    
+    return descricao
+}
 
   obterControle(nome: string): FormControl {
     const control = this.formBusca.get(nome);
