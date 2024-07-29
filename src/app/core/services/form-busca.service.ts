@@ -17,7 +17,7 @@ export class FormBuscaService {
       somenteIda: new FormControl(false),
       origem: new FormControl(null),
       destino: new FormControl(null),
-      tipo: new FormControl("Executiva"),
+      tipo: new FormControl("Executiva")
     })
   }
 
