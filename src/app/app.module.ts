@@ -34,6 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DropdownUfComponent } from './shared/form-busca/dropdown-uf/dropdown-uf.component';
 import { SeletorPassageiroComponent } from './shared/seletor-passageiro/seletor-passageiro.component';
 import { LoginComponent } from './pages/login/login.component';
+import { FormBaseComponent } from './shared/form-base/form-base.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { LoginComponent } from './pages/login/login.component';
     PromocoesComponent,
     DropdownUfComponent,
     SeletorPassageiroComponent,
-    LoginComponent
+    LoginComponent,
+    FormBaseComponent
   ],
   imports: [
     BrowserModule,
